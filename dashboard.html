@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Dashboard</title>
+    <link rel="stylesheet" href="solo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="system-container">
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <span class="system-prompt">SYSTEM:</span>
+                <span id="greeting" class="system-message"></span>
+            </div>
+            
+            <div class="player-stats">
+                <div class="stat">
+                    <span class="stat-name">LEVEL</span>
+                    <span id="level" class="stat-value">1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-name">EXP</span>
+                    <span id="exp" class="stat-value">0/100</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-name">AGE</span>
+                    <span id="age" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                    <span class="stat-name">NEXT BIRTHDAY</span>
+                    <span id="birthdayCountdown" class="stat-value"></span>
+                </div>
+            </div>
+            
+            <div class="stats-graph-container">
+                <canvas id="statsChart"></canvas>
+            </div>
+            
+            <div class="quest-section">
+                <h3 class="quest-title">🏋️‍♂️ DAILY WORKOUT QUEST</h3>
+                <div class="quest-card fancy-card">
+                    <h4 class="quest-header">🧾 Train Like a Hunter</h4>
+                    <div class="quest-reward">Reward: <span class="reward-badge">+1 STR</span>, <span class="reward-badge">+1 END</span>, <span class="reward-badge">+50 EXP</span></div>
+                    <div class="quest-steps-flex">
+                        <div class="quest-phase">
+                            <div class="phase-title">🛡️ Warm-Up <span class="phase-time">(5 mins)</span></div>
+                            <ul>
+                                <li>30x <span class="highlight">Jumping Jacks</span></li>
+                                <li>20x <span class="highlight">High Knees</span></li>
+                                <li>10x <span class="highlight">Arm Circles</span></li>
+                            </ul>
+                        </div>
+                        <div class="quest-phase">
+                            <div class="phase-title">🗡️ Main Workout <span class="phase-time">(30 mins)</span></div>
+                            <ul>
+                                <li>3x15 <span class="highlight">Push-ups</span></li>
+                                <li>3x20 <span class="highlight">Squats</span></li>
+                                <li>3x30s <span class="highlight">Plank</span></li>
+                            </ul>
+                        </div>
+                        <div class="quest-phase">
+                            <div class="phase-title">🧘 Cooldown <span class="phase-time">(5 mins)</span></div>
+                            <ul>
+                                <li><span class="highlight">Stretching</span></li>
+                                <li><span class="highlight">Hydration</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button id="completeQuestBtn" class="quest-btn">COMPLETE QUEST</button>
+                </div>
+                <div class="tracker-section">
+                    <h4 class="tracker-title">📅 Training Tracker</h4>
+                    <div id="trainingTracker" class="tracker-details"></div>
+                    <div id="calendar" class="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
